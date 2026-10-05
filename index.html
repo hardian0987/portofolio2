@@ -1,612 +1,181 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Developer | Ocean Theme</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hardian Ramadan — Fullstack Developer</title>
+<meta name="description" content="Portofolio Hardian Ramadan, Fullstack Developer: Laravel, PHP, MySQL, REST API & JavaScript.">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Bubbles Container -->
-    <div class="bubbles-container" id="bubblesContainer"></div>
+<div class="progress" id="progress"></div>
+<div class="glow" id="glow"></div>
+<div class="aurora"><i></i><i></i><i></i></div>
 
-    <!-- Navbar -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#" class="nav-logo">
-                <i class="fas fa-water"></i>
-                <span>OceanDev</span>
-            </a>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link active">Beranda</a></li>
-                <li><a href="#about" class="nav-link">Tentang</a></li>
-                <li><a href="#skills" class="nav-link">Keahlian</a></li>
-                <li><a href="#projects" class="nav-link">Proyek</a></li>
-                <li><a href="#gallery" class="nav-link">Galeri Laut</a></li>
-                <li><a href="#contact" class="nav-link">Kontak</a></li>
-            </ul>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+<header class="nav" id="nav">
+  <a href="#home" class="brand"><img src="images/poto keren.png" alt="Hardian"><span>hardian<b>.dev</b></span></a>
+  <nav id="menu">
+    <a href="#about">About</a><a href="#skills">Stack</a><a href="#projects">Projects</a><a href="#journey">Journey</a><a href="#contact">Contact</a>
+  </nav>
+  <a href="mailto:hardianr7@gmail.com" class="btn sm">Hire me</a>
+  <button class="burger" id="burger" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+</header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-bg">
-            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=80" alt="Ocean Background" class="hero-bg-img">
-            <div class="hero-overlay"></div>
-        </div>
-        <div class="wave-container">
-            <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28" preserveAspectRatio="none">
-                <defs>
-                    <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"/>
-                </defs>
-                <g class="wave-parallax">
-                    <use href="#wave-path" x="48" y="0" fill="rgba(255,255,255,0.7)"/>
-                    <use href="#wave-path" x="48" y="3" fill="rgba(255,255,255,0.5)"/>
-                    <use href="#wave-path" x="48" y="5" fill="rgba(255,255,255,0.3)"/>
-                    <use href="#wave-path" x="48" y="7" fill="#ffffff"/>
-                </g>
-            </svg>
-        </div>
-        <div class="hero-content">
-            <div class="hero-text">
-                <p class="hero-subtitle">Selamat Datang di Lautan Digital</p>
-                <h1 class="hero-title">Saya adalah <span class="typed-text" id="typedText"></span></h1>
-                <p class="hero-desc">Menjelajahi kedalaman kode seperti menjelajahi samudra yang luas. Mari kita ciptakan sesuatu yang luar biasa bersama.</p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">
-                        <i class="fas fa-anchor"></i> Lihat Proyek
-                    </a>
-                    <a href="#contact" class="btn btn-outline">
-                        <i class="fas fa-envelope"></i> Hubungi Saya
-                    </a>
-                </div>
-                <div class="hero-social">
-                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="mouse">
-                <div class="wheel"></div>
-            </div>
-            <p>Gulir ke bawah</p>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="section about" id="about">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag"><i class="fas fa-fish"></i> Tentang Saya</span>
-                <h2 class="section-title">Menjelajahi Dunia Coding</h2>
-                <div class="title-wave"></div>
-            </div>
-            <div class="about-grid">
-                <div class="about-image">
-                    <div class="image-frame">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&q=80" alt="Profile Photo" id="profilePhoto">
-                        <div class="image-bubbles">
-                            <span class="bubble"></span>
-                            <span class="bubble"></span>
-                            <span class="bubble"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-content">
-                    <h3>Halo, Nama Saya <span class="highlight">Developer</span></h3>
-                    <p>Saya adalah seorang web developer yang passionate dalam menciptakan pengalaman digital yang menakjubkan. Suka sekali dengan keindahan laut dan menginspirasi saya dalam bekerja.</p>
-                    <p>Seperti lautan yang luas dan dalam, dunia pemrograman juga memiliki kedalaman yang tak terbatas untuk dijelajahi. Saya selalu berusaha untuk terus belajar dan berkembang.</p>
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <span class="stat-number" data-count="50">0</span>+
-                            <span class="stat-label">Proyek Selesai</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number" data-count="30">0</span>+
-                            <span class="stat-label">Klien Puas</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number" data-count="5">0</span>+
-                            <span class="stat-label">Tahun Pengalaman</span>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn-primary">
-                        <i class="fas fa-download"></i> Download CV
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="section skills" id="skills">
-        <div class="ocean-bg">
-            <div class="underwater-overlay"></div>
-        </div>
-        <div class="container">
-            <div class="section-header light">
-                <span class="section-tag"><i class="fas fa-anchor"></i> Keahlian Saya</span>
-                <h2 class="section-title">Keterampilan Teknis</h2>
-                <div class="title-wave"></div>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-html5"></i>
-                    </div>
-                    <h3>HTML5</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-progress="95"></div>
-                    </div>
-                    <span class="skill-percent">95%</span>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-css3-alt"></i>
-                    </div>
-                    <h3>CSS3</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-progress="90"></div>
-                    </div>
-                    <span class="skill-percent">90%</span>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-js"></i>
-                    </div>
-                    <h3>JavaScript</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-progress="85"></div>
-                    </div>
-                    <span class="skill-percent">85%</span>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-react"></i>
-                    </div>
-                    <h3>React</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-progress="80"></div>
-                    </div>
-                    <span class="skill-percent">80%</span>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-node-js"></i>
-                    </div>
-                    <h3>Node.js</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-progress="75"></div>
-                    </div>
-                    <span class="skill-percent">75%</span>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-php"></i>
-                    </div>
-                    <h3>PHP</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-progress="70"></div>
-                    </div>
-                    <span class="skill-percent">70%</span>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-python"></i>
-                    </div>
-                    <h3>Python</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-progress="70"></div>
-                    </div>
-                    <span class="skill-percent">70%</span>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-git-alt"></i>
-                    </div>
-                    <h3>Git</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-progress="85"></div>
-                    </div>
-                    <span class="skill-percent">85%</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="section projects" id="projects">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag"><i class="fas fa-sailboat"></i> Proyek Saya</span>
-                <h2 class="section-title">Karya Terbaru</h2>
-                <div class="title-wave"></div>
-            </div>
-            <div class="project-filters">
-                <button class="filter-btn active" data-filter="all">Semua</button>
-                <button class="filter-btn" data-filter="web">Web Dev</button>
-                <button class="filter-btn" data-filter="mobile">Mobile</button>
-                <button class="filter-btn" data-filter="design">UI/UX</button>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card" data-category="web">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" alt="Project 1">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-link"></i></a>
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>E-Commerce Platform</h3>
-                        <p>Platform belanja online dengan fitur lengkap</p>
-                        <div class="project-tags">
-                            <span>React</span>
-                            <span>Node.js</span>
-                            <span>MongoDB</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card" data-category="mobile">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&q=80" alt="Project 2">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-link"></i></a>
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Mobile Banking App</h3>
-                        <p>Aplikasi perbankan mobile yang aman</p>
-                        <div class="project-tags">
-                            <span>Flutter</span>
-                            <span>Firebase</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card" data-category="design">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&q=80" alt="Project 3">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-link"></i></a>
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Dashboard UI Design</h3>
-                        <p>Desain dashboard modern dan responsif</p>
-                        <div class="project-tags">
-                            <span>Figma</span>
-                            <span>CSS</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card" data-category="web">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1555421689-d68471e189f2?w=600&q=80" alt="Project 4">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-link"></i></a>
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Travel Booking System</h3>
-                        <p>Sistem pemesanan tiket perjalanan</p>
-                        <div class="project-tags">
-                            <span>PHP</span>
-                            <span>Laravel</span>
-                            <span>MySQL</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card" data-category="mobile">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&q=80" alt="Project 5">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-link"></i></a>
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Fitness Tracker</h3>
-                        <p>Aplikasi pelatihan kebugaran personal</p>
-                        <div class="project-tags">
-                            <span>React Native</span>
-                            <span>Node.js</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card" data-category="design">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=600&q=80" alt="Project 6">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-link"></i></a>
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Brand Identity Design</h3>
-                        <p>Desain identitas visual untuk startup</p>
-                        <div class="project-tags">
-                            <span>Illustrator</span>
-                            <span>Photoshop</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery / Ocean Section -->
-    <section class="section gallery" id="gallery">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag"><i class="fas fa-water"></i> Galeri Laut</span>
-                <h2 class="section-title">Keindahan Samudra</h2>
-                <div class="title-wave"></div>
-                <p class="section-desc">Jelajahi keindahan dunia bawah laut yang memukau</p>
-            </div>
-        </div>
-        
-        <!-- Ocean Images Gallery -->
-        <div class="ocean-gallery">
-            <div class="ocean-item large">
-                <img src="https://images.unsplash.com/photo-1583212292454-1fe6229603b7?w=800&q=80" alt="Ocean View 1">
-                <div class="ocean-item-overlay">
-                    <i class="fas fa-expand"></i>
-                    <h4>Terumbu Karang</h4>
-                </div>
-            </div>
-            <div class="ocean-item">
-                <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80" alt="Ocean View 2">
-                <div class="ocean-item-overlay">
-                    <i class="fas fa-expand"></i>
-                    <h4>Ikan Tropis</h4>
-                </div>
-            </div>
-            <div class="ocean-item">
-                <img src="https://images.unsplash.com/photo-1571752726703-5e7d1f6a986d?w=600&q=80" alt="Ocean View 3">
-                <div class="ocean-item-overlay">
-                    <i class="fas fa-expand"></i>
-                    <h4>Pantai Indah</h4>
-                </div>
-            </div>
-            <div class="ocean-item">
-                <img src="https://images.unsplash.com/photo-1582967788606-a171c7a4e015?w=600&q=80" alt="Ocean View 4">
-                <div class="ocean-item-overlay">
-                    <i class="fas fa-expand"></i>
-                    <h4>Kehidupan Laut</h4>
-                </div>
-            </div>
-            <div class="ocean-item wide">
-                <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=1200&q=80" alt="Ocean View 5">
-                <div class="ocean-item-overlay">
-                    <i class="fas fa-expand"></i>
-                    <h4>Sunset di Pantai</h4>
-                </div>
-            </div>
-            <div class="ocean-item">
-                <img src="https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?w=600&q=80" alt="Ocean View 6">
-                <div class="ocean-item-overlay">
-                    <i class="fas fa-expand"></i>
-                    <h4>Penyu Laut</h4>
-                </div>
-            </div>
-        </div>
-
-        <!-- Video Section -->
-        <div class="container">
-            <div class="video-section">
-                <h3 class="video-title"><i class="fas fa-video"></i> Video Bawah Laut</h3>
-                <div class="video-grid">
-                    <div class="video-card">
-                        <div class="video-wrapper">
-                            <!-- Ganti src video ikan laut di sini -->
-                            <video poster="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80" muted loop playsinline id="oceanVideo1">
-                                <source src="video-ikan-1.mp4" type="video/mp4">
-                                Browser Anda tidak mendukung video.
-                            </video>
-                            <button class="video-play-btn" onclick="toggleVideo('oceanVideo1', this)">
-                                <i class="fas fa-play"></i>
-                            </button>
-                        </div>
-                        <div class="video-info">
-                            <h4>Ikan di Terumbu Karang</h4>
-                            <p>Kehidupan ikan di terumbu karang yang indah</p>
-                        </div>
-                    </div>
-                    <div class="video-card">
-                        <div class="video-wrapper">
-                            <!-- Ganti src video ikan laut di sini -->
-                            <video poster="https://images.unsplash.com/photo-1583212292454-1fe6229603b7?w=600&q=80" muted loop playsinline id="oceanVideo2">
-                                <source src="video-ikan-2.mp4" type="video/mp4">
-                                Browser Anda tidak mendukung video.
-                            </video>
-                            <button class="video-play-btn" onclick="toggleVideo('oceanVideo2', this)">
-                                <i class="fas fa-play"></i>
-                            </button>
-                        </div>
-                        <div class="video-info">
-                            <h4>Terumbu Karang</h4>
-                            <p>Keindahan terumbu karang di dasar laut</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="section contact" id="contact">
-        <div class="contact-bg">
-            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=80" alt="Contact Background">
-            <div class="contact-overlay"></div>
-        </div>
-        <div class="container">
-            <div class="section-header light">
-                <span class="section-tag"><i class="fas fa-dove"></i> Kontak</span>
-                <h2 class="section-title">Hubungi Saya</h2>
-                <div class="title-wave"></div>
-                <p class="section-desc">Kiriman pesan seperti mengirim surat dalam botol ke lautan</p>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div>
-                            <h4>Lokasi</h4>
-                            <p>Jakarta, Indonesia</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div>
-                            <h4>Email</h4>
-                            <p>developer@ocean.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div>
-                            <h4>Telepon</h4>
-                            <p>+62 812 3456 7890</p>
-                        </div>
-                    </div>
-                    <div class="contact-social">
-                        <a href="#" class="social-circle"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-circle"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-circle"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-circle"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <input type="text" id="name" required placeholder=" ">
-                        <label for="name"><i class="fas fa-user"></i> Nama Lengkap</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" required placeholder=" ">
-                        <label for="email"><i class="fas fa-envelope"></i> Email</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="subject" required placeholder=" ">
-                        <label for="subject"><i class="fas fa-tag"></i> Subjek</label>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" rows="5" required placeholder=" "></textarea>
-                        <label for="message"><i class="fas fa-comment"></i> Pesan</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-full">
-                        <i class="fas fa-paper-plane"></i> Kirim Pesan
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="wave-container-footer">
-            <svg class="waves-footer" xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28" preserveAspectRatio="none">
-                <defs>
-                    <path id="wave-path-footer" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"/>
-                </defs>
-                <g class="wave-parallax-footer">
-                    <use href="#wave-path-footer" x="48" y="0" fill="rgba(0,77,128,0.3)"/>
-                    <use href="#wave-path-footer" x="48" y="3" fill="rgba(0,77,128,0.5)"/>
-                    <use href="#wave-path-footer" x="48" y="5" fill="rgba(0,77,128,0.7)"/>
-                    <use href="#wave-path-footer" x="48" y="7" fill="#004d80"/>
-                </g>
-            </svg>
-        </div>
-        <div class="footer-content">
-            <div class="container">
-                <div class="footer-grid">
-                    <div class="footer-col">
-                        <h3><i class="fas fa-water"></i> OceanDev</h3>
-                        <p>Developer yang terinspirasi dari keindahan lautan. Mari ciptakan dunia digital yang lebih baik.</p>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Menu</h4>
-                        <ul>
-                            <li><a href="#home">Beranda</a></li>
-                            <li><a href="#about">Tentang</a></li>
-                            <li><a href="#skills">Keahlian</a></li>
-                            <li><a href="#projects">Proyek</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Layanan</h4>
-                        <ul>
-                            <li><a href="#">Web Development</a></li>
-                            <li><a href="#">Mobile App</a></li>
-                            <li><a href="#">UI/UX Design</a></li>
-                            <li><a href="#">Consulting</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Newsletter</h4>
-                        <p>Langganan untuk mendapatkan update terbaru</p>
-                        <div class="footer-form">
-                            <input type="email" placeholder="Email Anda">
-                            <button><i class="fas fa-paper-plane"></i></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <p>&copy; 2026 OceanDev. Dibuat dengan <i class="fas fa-heart" style="color: #e74c3c;"></i> dan banyak <i class="fas fa-coffee"></i></p>
-                    <div class="footer-social">
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Back to Top -->
-    <button class="back-to-top" id="backToTop">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <!-- Lightbox Modal -->
-    <div class="lightbox" id="lightbox">
-        <button class="lightbox-close" id="lightboxClose"><i class="fas fa-times"></i></button>
-        <img src="" alt="" id="lightboxImg">
+<main>
+<section class="hero" id="home">
+  <div class="orbit" aria-hidden="true"><div class="ring r1"><span class="o" style="--a:0deg"><i class="devicon-laravel-original colored"></i></span><span class="o" style="--a:90deg"><i class="devicon-mysql-original colored"></i></span><span class="o" style="--a:180deg"><i class="devicon-javascript-plain colored"></i></span><span class="o" style="--a:270deg"><i class="devicon-php-plain colored"></i></span></div><div class="ring r2"><span class="o" style="--a:45deg"><i class="devicon-git-plain colored"></i></span><span class="o" style="--a:165deg"><i class="devicon-docker-plain colored"></i></span><span class="o" style="--a:285deg"><i class="devicon-postman-plain colored"></i></span></div></div>
+  <div class="hero-txt rv">
+    <span class="pill"><i class="dot"></i> Available for hire · Fullstack Developer</span>
+    <h1>Merancang produk web<br>dari <span class="grad">database</span> sampai <span class="grad">antarmuka.</span></h1>
+    <p class="mono"><span id="typed"></span><span class="caret">▍</span></p>
+    <p class="lead">Fullstack developer dengan Laravel, MySQL, dan JavaScript. Fokus pada sistem yang rapi, aman, dan nyaman dipakai.</p>
+    <div class="cta">
+      <a href="#projects" class="btn">Lihat Proyek <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="#playground" class="btn ghost"><i class="fa-solid fa-terminal"></i> Coba API saya</a>
     </div>
+    <div class="hero-meta"><span><b>Laravel</b>Backend</span><span><b>MySQL</b>Database</span><span><b>REST API</b>Integrasi</span></div>
+  </div>
+</section>
 
-    <script src="script.js"></script>
+<div class="marquee"><div class="track" id="track"></div></div>
+
+<section class="stats">
+  <div class="rv"><b data-n="3">0</b>+<small>Proyek</small></div>
+  <div class="rv"><b data-n="12">0</b>+<small>Tools & teknologi</small></div>
+  <div class="rv"><b data-n="1">0</b>+<small>Tahun koding</small></div>
+  <div class="rv"><b data-n="100">0</b>%<small>Semangat belajar</small></div>
+</section>
+
+<section class="sec" id="about">
+  <p class="eyebrow">01 — About</p>
+  <p class="manifesto" id="manifesto">Saya Hardian, fullstack developer yang membangun web dari database sampai antarmuka. Lulusan SMK RPL yang percaya kemampuan dibangun lewat proyek nyata, satu commit setiap hari.</p>
+  <div class="about-row">
+    <div class="puzzle rv" id="puzzle" data-src="images/poto ganteng.jpeg" role="img" aria-label="Foto Hardian Ramadan dalam bentuk puzzle"></div>
+    <div class="tiles">
+      <div class="tile rv"><small>Latar belakang</small><b>SMK RPL</b></div>
+      <div class="tile rv"><small>Fokus utama</small><b>Laravel</b></div>
+      <div class="tile rv"><small>Status</small><b><i class="dot"></i> Open to work</b></div>
+      <div class="tile rv"><small>Mencari</small><b>Junior / Full-time</b></div>
+      <div class="tile wide rv"><p>“Setiap baris kode hari ini adalah batu loncatan menuju versi terbaik esok hari.”</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="skills">
+  <p class="eyebrow">02 — Stack</p>
+  <h2 class="rv">Alat yang saya pakai setiap hari.</h2>
+  <div class="filters rv" id="filters">
+    <button class="on" data-f="all">Semua</button><button data-f="Backend">Backend</button><button data-f="Frontend">Frontend</button><button data-f="Database">Database</button><button data-f="Tools">Tools</button>
+  </div>
+  <div class="skills" id="skillGrid"></div>
+</section>
+
+<section class="sec" id="projects">
+  <p class="eyebrow">03 — Projects</p>
+  <h2 class="rv">Karya terpilih.</h2>
+  <div class="pstack">
+    <article class="pcard" style="--i:0">
+      <div class="pinfo"><span class="num">01</span><h3>Elyfone</h3><small>E-Commerce · Fullstack</small>
+        <p>Toko online gadget dengan katalog dinamis, detail produk, dan simulasi keranjang belanja.</p>
+        <div class="tags"><span>Laravel</span><span>MySQL</span><span>Blade</span></div>
+        <button class="link" data-p="0">Lihat detail proyek <i class="fa-solid fa-arrow-right"></i></button></div>
+      <div class="pvis v1"><img src="images/image.png" alt="Elyfone — toko online gadget"></div>
+    </article>
+    <article class="pcard" style="--i:1">
+      <div class="pinfo"><span class="num">02</span><h3>MyDay</h3><small>Personal Web · Frontend</small>
+        <p>Web keseharian untuk mencatat aktivitas, jadwal, dan hal sederhana setiap hari.</p>
+        <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+        <button class="link" data-p="1">Lihat detail proyek <i class="fa-solid fa-arrow-right"></i></button></div>
+      <div class="pvis v2"><img src="images/project myday.jpg" alt="MyDay"></div>
+    </article>
+    <article class="pcard" style="--i:2">
+      <div class="pinfo"><span class="num">03</span><h3>REST API Gateway</h3><small>API · Integration</small>
+        <p>Membangun dan mengonsumsi REST API dengan Laravel, Bearer token, dan pengujian Postman.</p>
+        <div class="tags"><span>Laravel</span><span>REST API</span><span>Postman</span></div>
+        <button class="link" data-p="2">Lihat detail proyek <i class="fa-solid fa-arrow-right"></i></button></div>
+      <div class="pvis v3"><pre class="mono"><b>GET</b> /api/v1/products
+Authorization: Bearer ••••
+
+<em>200 OK</em>
+{
+  "status": "success",
+  "data": [ ... ]
+}</pre></div>
+    </article>
+  </div>
+</section>
+
+<section class="sec" id="playground">
+  <p class="eyebrow">Bonus — Playground</p>
+  <h2 class="rv">Coba API saya langsung.</h2>
+  <div class="api rv">
+    <div class="api-side" id="apiSide">
+      <button class="on" data-e="profile"><b>GET</b> /api/profile</button>
+      <button data-e="skills"><b>GET</b> /api/skills</button>
+      <button data-e="projects"><b>GET</b> /api/projects</button>
+      <button data-e="contact"><b class="post">POST</b> /api/contact</button>
+    </div>
+    <div class="api-term">
+      <div class="fl-head"><i></i><i></i><i></i><span class="mono" id="apiUrl">GET /api/profile</span></div>
+      <div class="api-bar mono"><span id="apiStatus">READY</span><span id="apiTime"></span><button class="btn sm" id="apiSend"><i class="fa-solid fa-play"></i> Send</button></div>
+      <pre id="apiOut" class="mono"></pre>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="journey">
+  <p class="eyebrow">04 — Journey</p>
+  <h2 class="rv">Proses yang terus berjalan.</h2>
+  <div class="tl" id="tl"><span class="tl-line"><span id="tlFill"></span></span>
+    <div class="step"><em>2024</em><div><h4>Mulai dari dasar</h4><p>Logika pemrograman, HTML, CSS, dan PHP Native di SMK RPL.</p></div></div>
+    <div class="step"><em>Now</em><div><h4>Backend & Web App</h4><p>Laravel: routing, desain database, REST API, hingga deployment.</p></div></div>
+    <div class="step"><em>Next</em><div><h4>Siap berkontribusi</h4><p>Memperdalam JavaScript modern dan arsitektur cloud.</p></div></div>
+  </div>
+</section>
+
+<section class="sec" id="contact">
+  <p class="eyebrow">05 — Contact</p>
+  <h2 class="big-cta rv">Punya ide?<br><span class="grad">Mari kita bangun.</span></h2>
+  <div class="brief rv" id="brief">
+    <div class="br-form">
+      <h3>Bangun brief proyekmu</h3><small>Pilih opsi di bawah, brief tersusun otomatis di samping.</small>
+      <div class="br-g" data-k="type" data-single><h5>Jenis proyek</h5><button class="on">Company Profile</button><button>E-Commerce</button><button>Dashboard Admin</button><button>REST API</button></div>
+      <div class="br-g" data-k="feat"><h5>Fitur</h5><button>Login & Role</button><button>Admin Panel</button><button>Pembayaran</button><button>API Integrasi</button><button>Responsif</button></div>
+      <div class="br-g" data-k="time" data-single><h5>Timeline</h5><button>&lt; 1 bulan</button><button>1–3 bulan</button><button class="on">Fleksibel</button></div>
+    </div>
+    <div class="br-out"><div class="fl-head"><i></i><i></i><i></i><span class="mono">brief.md</span></div><pre id="brOut" class="mono"></pre>
+      <div class="br-act"><a id="brSend" class="btn sm" href="#"><i class="fa-solid fa-paper-plane"></i> Kirim via email</a><button id="brCopy" class="copy">Salin brief</button></div></div>
+  </div>
+  <div class="mail rv">
+    <a href="mailto:hardianr7@gmail.com" class="mail-link magnet"><span>hardianr7@gmail.com</span><i class="fa-solid fa-arrow-up-right"></i></a>
+    <button class="copy" id="copy"><i class="fa-regular fa-copy"></i> <span>Salin email</span></button>
+  </div>
+  <div class="socials rv"><a href="https://github.com/hardian0987" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a><a href="mailto:hardianr7@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a></div>
+</section>
+</main>
+
+<footer>© 2026 Hardian Ramadan · Dibuat dengan kode & kopi</footer>
+
+<div class="player" id="player">
+  <button class="disc" id="disc" aria-label="Buka player"><i class="fa-solid fa-music"></i></button>
+  <div class="pbody">
+    <div class="ptxt"><b id="pTitle">—</b><small id="pArtist">—</small></div>
+    <div class="bar" id="bar"><span id="fill"></span></div>
+    <div class="ctrl">
+      <button id="prev" aria-label="Sebelumnya"><i class="fa-solid fa-backward-step"></i></button>
+      <button id="play" class="pp" aria-label="Putar"><i class="fa-solid fa-play"></i></button>
+      <button id="next" aria-label="Berikutnya"><i class="fa-solid fa-forward-step"></i></button>
+    </div>
+    <span class="eq"><i></i><i></i><i></i><i></i></span>
+    <button id="hide" class="hide" aria-label="Sembunyikan player"><i class="fa-solid fa-chevron-left"></i></button>
+  </div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
